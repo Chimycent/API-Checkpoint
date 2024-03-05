@@ -5,9 +5,9 @@ const UserList = () => {
   const [listOfUsers, setListOfUsers] = useState([]);
   useEffect(() => {
     const fetchUsers = async () => {
-      try {
+      try { 
         const response = await axios.get(import.meta.env.VITE_API_URL);
-        setListOfUsers(response.data);
+        setListOfUsers(response.data);  
       } catch (error) {
         console.error("Error fetching users:", error);
       }
